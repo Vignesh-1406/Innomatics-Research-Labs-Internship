@@ -1,0 +1,45 @@
+body {
+    background: #f4f6f9;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.short-url-box {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.short-url-box input {
+    flex: 1;
+}
+
+.copy-btn {
+    background-color: #198754;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.copy-btn:hover {
+    background-color: #146c43;
+}
+
+.footer-link {
+    text-align: center;
+    margin-top: 20px;
+}
