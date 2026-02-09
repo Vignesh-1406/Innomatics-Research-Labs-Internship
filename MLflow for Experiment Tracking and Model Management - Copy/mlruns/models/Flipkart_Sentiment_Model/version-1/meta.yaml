@@ -1,0 +1,16 @@
+creation_timestamp: 1770212225523
+current_stage: Staging
+deployment_job_state: null
+description: null
+last_updated_timestamp: 1770212225794
+model_id: m-0f0ac8a1ada940109417c61d0007b5cc
+name: Flipkart_Sentiment_Model
+run_id: ea3ae50f27b849339e1345aaa37dd8be
+run_link: null
+source: models:/m-0f0ac8a1ada940109417c61d0007b5cc
+status: READY
+status_message: null
+storage_location: file:C:\Users\vigne\OneDrive\Desktop\IRL\ML\MLflow for Experiment
+  Tracking and Model Management\mlruns/555841067408375903/models/m-0f0ac8a1ada940109417c61d0007b5cc/artifacts
+user_id: null
+version: 1
