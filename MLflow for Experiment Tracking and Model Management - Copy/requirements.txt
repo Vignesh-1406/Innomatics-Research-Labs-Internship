@@ -1,0 +1,17 @@
+pandas
+numpy
+scikit-learn
+nltk
+spacy
+streamlit
+matplotlib
+seaborn
+joblib
+tqdm
+pytest
+pytest-cov
+mlflow
+prefect>=3.0
+prefect-aws
+python-dotenv
+plotly
