@@ -1,0 +1,26 @@
+{
+  "model": "RandomForest",
+  "best_params": {
+    "max_depth": null,
+    "min_samples_split": 5,
+    "n_estimators": 100
+  },
+  "cv_f1_score": 0.9059006610079857,
+  "test_metrics": {
+    "f1_score": 0.9106502127544813,
+    "precision": 0.9093800300276821,
+    "recall": 0.9152435167615434,
+    "accuracy": 0.9152435167615434
+  },
+  "classification_report": "              precision    recall  f1-score   support\n\n    negative       0.74      0.58      0.65       215\n    positive       0.94      0.97      0.95      1366\n\n    accuracy                           0.92      1581\n   macro avg       0.84      0.77      0.80      1581\nweighted avg       0.91      0.92      0.91      1581\n",
+  "confusion_matrix": [
+    [
+      124,
+      91
+    ],
+    [
+      43,
+      1323
+    ]
+  ]
+}

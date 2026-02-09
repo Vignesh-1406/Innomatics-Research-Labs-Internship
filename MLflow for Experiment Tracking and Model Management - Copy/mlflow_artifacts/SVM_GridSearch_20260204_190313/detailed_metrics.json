@@ -1,0 +1,25 @@
+{
+  "model": "SVM",
+  "best_params": {
+    "C": 1,
+    "loss": "hinge"
+  },
+  "cv_f1_score": 0.9176868336017326,
+  "test_metrics": {
+    "f1_score": 0.921318844067379,
+    "precision": 0.9207828328002694,
+    "recall": 0.9253636938646427,
+    "accuracy": 0.9253636938646427
+  },
+  "classification_report": "              precision    recall  f1-score   support\n\n    negative       0.79      0.61      0.69       215\n    positive       0.94      0.97      0.96      1366\n\n    accuracy                           0.93      1581\n   macro avg       0.87      0.79      0.82      1581\nweighted avg       0.92      0.93      0.92      1581\n",
+  "confusion_matrix": [
+    [
+      132,
+      83
+    ],
+    [
+      35,
+      1331
+    ]
+  ]
+}
