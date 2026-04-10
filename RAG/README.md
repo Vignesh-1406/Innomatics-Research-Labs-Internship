@@ -123,32 +123,7 @@ KNOWLEDGE_BASE_ID=kb_xxxxx
 BEDROCK_MODEL_ID=anthropic.claude-3-sonnet-20240229-v1:0
 ```
 
-## AWS IAM Permissions Required
 
-```json
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Action": [
-        "bedrock:*",
-        "s3:*",
-        "opensearchserverless:*",
-        "iam:*"
-      ],
-      "Resource": "*"
-    }
-  ]
-}
-```
-
-## Cost Optimization
-
-- S3: ~$0.023/GB/month
-- Bedrock: ~$0.003 per 1k tokens
-- OpenSearch Serverless: ~$1.4/hour
-- Monthly estimate: $50-100 for small KB
 
 ## Troubleshooting
 
@@ -159,67 +134,3 @@ BEDROCK_MODEL_ID=anthropic.claude-3-sonnet-20240229-v1:0
 | Knowledge Base not found | Check KNOWLEDGE_BASE_ID in .env |
 | S3 access denied | Verify IAM permissions |
 
-## API Reference
-
-### BedrockKBHandler
-```python
-from bedrock_kb_handler import create_bedrock_handler
-
-handler = create_bedrock_handler()
-result = handler.retrieve_and_answer("Your question")
-print(result['answer'])
-```
-
-### S3DocumentHandler
-```python
-from s3_handler import create_s3_handler
-
-s3_handler = create_s3_handler()
-s3_handler.upload_directory('data/')
-docs = s3_handler.list_documents()
-```
-
-## Security
-
-- Never commit .env file
-- Use IAM roles for EC2 instances
-- Enable S3 versioning
-- Encrypt sensitive data
-- Use private S3 bucket
-
-## Performance
-
-- Retrieve top-3 documents by default
-- Chunk size: 1000 characters
-- Embedding model: Amazon Titan
-- LLM: Claude 3 Sonnet
-
-## Deployment Options
-
-1. **Local**: Development machine
-2. **EC2**: Full control with bash script
-3. **Streamlit Cloud**: Web UI only
-4. **Lambda**: Serverless backend (custom setup)
-
-## Maintenance
-
-- Monitor S3 bucket size
-- Review Bedrock API costs
-- Archive old documents
-- Update dependencies monthly
-
-## Support
-
-For issues or questions:
-1. Check AWS Bedrock documentation
-2. Review error messages in logs
-3. Verify IAM permissions
-4. Ensure AWS credentials are set
-
-## License
-
-Proprietary - For authorized use only
-
-## Version
-
-1.0.0 - April 2026
