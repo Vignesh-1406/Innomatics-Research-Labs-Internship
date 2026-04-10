@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  bedrock-rag:
+    build: .
+    container_name: bedrock-rag-app
+    ports:
+      - "8501:8501"
+    environment:
+      - AWS_REGION=${AWS_REGION:-us-east-1}
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - S3_BUCKET_NAME=${S3_BUCKET_NAME}
+      - KNOWLEDGE_BASE_ID=${KNOWLEDGE_BASE_ID}
+      - BEDROCK_MODEL_ID=${BEDROCK_MODEL_ID:-anthropic.claude-3-sonnet-20240229-v1:0}
+    volumes:
+      - ./data:/app/data
+      - ~/.aws:/root/.aws:ro
+    networks:
+      - bedrock-network
+    restart: unless-stopped
+
+networks:
+  bedrock-network:
+    driver: bridge
